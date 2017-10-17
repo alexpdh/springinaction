@@ -1,14 +1,17 @@
 package com.springinaction.chapter02;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @auther: alexpdh
- * @create: 2017-10-17 0:15
+ * @author: alexpdh
+ * @date: 2017-10-17 0:15
  */
 @Configuration
-@ComponentScan
 public class CDPlayerConfig {
-
+	@Bean
+	public CompactDisc sgtPeppers() {
+		return new SgtPeppers();
+	}
 }
